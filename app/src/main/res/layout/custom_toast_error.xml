@@ -16,7 +16,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/imageView1"
-            android:src="@drawable/Red_triangle_alert_icon"
+            android:src="@drawable/alert_icon"
             />
         <TextView
             android:layout_width="wrap_content"
