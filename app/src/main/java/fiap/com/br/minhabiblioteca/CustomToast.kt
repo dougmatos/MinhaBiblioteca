@@ -9,10 +9,36 @@ import android.widget.Toast
 
 class CustomToast{
 
-    public fun showToast(context: Context, message: String){
+    fun showToast(context: Context, message: String){
+
+        showToast(R.layout.custom_toast, context, message)
+    }
+
+    fun showToastError(context: Context, message: String){
+
+        showToast(R.layout.custom_toast_error, context, message)
+    }
+
+    fun showToastWarning(context: Context, message: String){
+
+        showToast(R.layout.custom_toast_warning, context, message)
+    }
+
+    fun showToastSuccess(context: Context, message: String){
+
+        showToast(R.layout.custom_toast_success, context, message)
+    }
+
+    fun showToastInfo(context: Context, message: String){
+
+        showToast(R.layout.custom_toast_info, context, message)
+    }
+
+
+    private fun showToast(layout: Int, context: Context, message: String){
 
         val inflater: LayoutInflater = LayoutInflater.from(context)
-        val customToastRoot : View = inflater.inflate(R.layout.custom_toast, null)
+        val customToastRoot : View = inflater.inflate(layout, null)
         val customToast = Toast(context)
 
         customToast.setView(customToastRoot)
